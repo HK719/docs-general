@@ -1,18 +1,12 @@
 = Anypoint Platform Hosting Options
 
-MuleSoft provides and supports different hosting options to accomadate different data security, data privacy, and legal requirements. These options enable you to control the physical location where your and your customer's data are hosted. This includes
+MuleSoft provides and supports different hosting options to account for different data security, data privacy, and legal requirements. The different hosting options enable you to control the physical location where your and your customer's data is managed. The data remains within the physical location required by your companies IT policies and requirements. For example, MuleSoft provides an EU Cloud which enables you to maintain all of your data on your own data centers or within the European Union.
 
-* Your assets, including API specifications and Mule applications
-* Metadata about your assets
-* Data that passes through your APIs and Mule applications.
+== The Control Plane and Runtime Plane
 
-This data remains within the physical location required by your companies IT policies and requirements. For example, MuleSoft provides an EU Cloud which enables you to maintain all of your data on your own data centers or within the European Union.
+To understand the different hosting options, it is important to understand the control plane and runtime plane:
 
-== Control Plane and Runtime Plane
-
-To understand the different possible hosting options, it is important to understand the following concepts:
-
-image::intro-control-vs-runtime-planes.bnp[]
+image::intro-control-vs-runtime-planes.bmp[]
 
 * Control plane
 +
@@ -35,9 +29,6 @@ In the US Cloud, Anypoint Platform and CloudHub are physically hosted within the
 * EU Cloud
 +
 In the EU Cloud, Anypoint Platform and CloudHub are physically hosted within the European Union.
-+
-[NOTE]
-Anypoint Partner Manager is not supported in the EU Cloud.
 
 * MuleSoft Government Cloud
 +
@@ -121,7 +112,7 @@ Anypoint Platform Private Cloud Edition is a version of Anypoint Platform that y
 
 image:intro-private-cloud-edition.bmp[]
 
-PCE supports deploying to Mule runtime servers hosted in CloudHub and hybrid environments. The latter enables you to host all 100% of MuleSoft functionality within your own data centers.
+PCE supports deploying to Mule runtime servers hosted in CloudHub and hybrid environments. The latter enables you to host both the control plane and runtime plane within your own data centers.
 
 [WARNING]
 Anypoint Platform Private Cloud Edition does not support deploying APIs and Mule applications to Anypoint Runtime Fabric.
