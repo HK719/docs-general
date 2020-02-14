@@ -1,5 +1,15 @@
 = Anypoint Platform Hosting Options
 
+MuleSoft provides and supports different hosting options to accomadate different data security, data privacy, and legal requirements. These options enable you to control the physical location where your and your customer's data are hosted. This includes
+
+* Your assets, including API specifications and Mule applications
+* Metadata about your assets
+* Data that passes through your APIs and Mule applications.
+
+This data remains within the physical location required by your companies IT policies and requirements. For example, MuleSoft provides an EU Cloud which enables you to maintain all of your data on your own data centers or within the European Union.
+
+== Control Plane and Runtime Plane
+
 To understand the different possible hosting options, it is important to understand the following concepts:
 
 image::intro-control-vs-runtime-planes.bnp[]
@@ -25,5 +35,8 @@ image::intro-cloud-hosting-options.bmp[]
 
 == Hybrid Hosting Options
 
+image::intro-hybrid-hosting-options.bmp[]
+
 == Anypoint Platform Private Cloud Edition
 
+image:intro-private-cloud-edition.bmp[]
