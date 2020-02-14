@@ -1,149 +1,29 @@
 = Anypoint Platform Hosting Options
 
-MuleSoft provides and supports different hosting options to accomadate different data security, data privacy, and legal requirements. These options enable you to control the physical location where your and your customer's data are hosted. This includes
+To understand the different possible hosting options, it is important to understand the following concepts:
 
-* Your assets, including API specifications and Mule applications
-* Metadata about your assets
-* Data that passes through your APIs and Mule applications.
+image::intro-control-vs-runtime-planes.bnp[]
 
-This data remains within the physical location required by your companies IT policies and requirements. For example, MuleSoft provides an EU Cloud which enables you to maintain all of your data on your own data centers or within the European Union.
-
-== Hosting Options for Mule Runtime Server
-
-MuleSoft supports different environments that give you control over the physical location where your APIs and Mule applications are hosted. This ensures that data associated with each API and Mule application remains within the location you choose. The following diagram shows the different hosting options for Mule runtime server.
-
-image::intro-hosting-options.png[]
-
-In this scenario, MuleSoft hosts Anypoint Platform, which includes Exchange, Design Center, and Management Center (API Manager and Runtime Manager). The diagram also lists the different hosting options for Mule runtime server, which include:
-
-* CloudHub
+* Control plane
 +
-CloudHub is MuleSoft's cloud-based environment that enables you deploy an API or a Mule application to hosted Mule runtime server. MuleSoft provides and maintains high availablity and fail-over. MuleSoft also provides clustering and failover of your APIs and Mule applications and load balances traffic to them. See xref:runtime-manager::cloudhub.adoc[CloudHub] for more information.
+The control plane contains the Anypoint Platform components for designing, deploying, and managing APIs and Mule applications.
+
+* Runtime plane
 +
-CloudHub is supported in different cloud environments to accomodate your data and regulator requirements. See xref:Cloud Hosting Option[Cloud Hosting Options]
+The runtime plane contains the runtime components of Anypoint Platform, including the Mule runtime server and other services.
 
-* Hybrid
-+
-A hybrid environment is an environment where you host APIs and Mule applications to your data center, but MuleSoft hosts the Design Center and Management Center components in the cloud. This scenario enables you to host Mule Runtime server in an environment that you manage. All customer data that passes through your API or Mule application remains in this environment.
-+
-Within a hybrid environment, you are responsible for providing the infrastructure where the Mule Runtime Server is hosted. In a Hybrid environment, the Mule Runtime Server can run on a physical server, a virtual machine, or within a 3rd-party cloud installation like Amazon Web Services or Microsoft Azure.
-+
-In this environment, you are responsible for providing the framework for high-availability, failover, clustering and load balancing.
-+
-See xref:runtime-manager::deployment-strategies#hybrid-deployments.adoc[Hybrid Deployments] for more information.
+== MuleSoft Managed Hosting Options
 
-* Runtime Fabric
-+
-Runtime Fabric enables your to host Mule Runtime server within a data center that you control and manage. Similar to a hybrid installation, Runtime Fabric supports hosting Mule Runtime Servers in a physical server, a virtual machine or within Amazon Web Services and Microsoft Azure. Unlike a Hybrid environment, Runtime Fabric is a network appliance that uses Kubernetes to manage high-availability, failover, clustering, and load balancing.
-+
-See xref:runtime-fabric::index.adoc[Anypoint Runtime Fabric Overview] for more information.
+The following diagram shows the possible hosting options where MuleSoft hosts and manages both the control plane and runtime plane:
 
-=== Support Matrix for Runtime Hosting Options
+image::intro-cloud-hosting-options.bmp[]
 
-Not all Anypoint Platform components are supported in each of these Mule runtime server hosting options:
-
-[%header,cols="4*a"]
-|===
-| Anypoint Platform Component | CloudHub | Runtime Fabric | Hybrid
-| Mule runtime engine | Y | Y | Y
-| Anypoint MQ | Y | N | N
-| Anypoint Object Store | Y | N | Y
-| Connectors | Y | Y | Y
-|===
-
-== Hosting Options for Exchange, Design Center, and Management Center
-
-MuleSoft provides different hosting options for Anypoint Platform, which includes Exchange, Design Center, and Management Center.
-
-* Anypoint Platform
-+
-Anypoint Platform is MuleSoft's cloud-based platform for designing and deploying APIs and Mule applications. This is the default option for most customers.
-
-
-* Anypoint Platform Private Cloud Edition (PCE)
-+
-Anypoint Platform Private Cloud Edition is a version of Anypoint Platform that you host within your own data center. PCE enab les you to control the environment where your assets and metadata are stored.
-+
-PCE supports deploying to Mule runtime servers hosted in CloudHub and hybrid environments. The latter enables you to host all 100% of MuleSoft functionality within your own data centers.
-
-[NOTE]
-Anypoint Platform Private Cloud Edition does not support deploying APIs and Mule applications to Anypoint Runtime Fabric.
-
-=== Support Matrix for Anypoint Private Cloud Edition
-
-The following table lists the Anypoint Platform components supported by each version:
-
-[%header,cols="3*a"]
-|===
-| Anypoint Platform Component | Anypoint Platform | Anypoint Platform PCE
-| API Designer | Y | Y
-| Anypoint Studio | Y | Y
-| Flow Designer | Y | N
-| Anypoint Exchange | Y | Y
-| Anypoint API Community Manager* | Y | N
-| Anypoint Partner Manager | Y | N
-| Access management | Y | Y
-| Analytics | Y | N
-| Anypoint API Manager | Y | Y
-| Anypoint Runtime Manager | Y | Y (Insight not supported)
-| Anypoint Monitoring | Y | N
-| Secrets manager | Y | N
-| Anypoint Visualizer | Y | N
-| Anypoint Security edge policies | Y | N
-| Anypoint Security tokenization | Y | N
-|===
-
-[NOTE]
-Anypoint API Community Manager (API Community Manager) incorporates capabilities and functionality of the Salesforce platform into Anypoint Platform.
-
-== Cloud Hosting Option
-
-To accomodate multiple data security and compliance requirements, MuleSoft provides different cloud environments.
 
 * US Cloud
-+
-In the US Cloud, Anypoint Platform and CloudHub are physically hosted within the United States. To improve performance and reduce latency, you can deploy APIs and Mule applications to Mule Runtimes located in different regions. When enabled, each regions appears as different deployment targets during deployment. This is the default environment.
-
 * EU Cloud
-+
-In the EU Cloud, Anypoint Platform and CloudHub are physically hosted within the European Union.
-+
-[NOTE]
-Anypoint Partner Manager is not supported in the EU Cloud.
+* Gov Cloud
 
-* MuleSoft Government Cloud
-+
-MuleSoft Government Cloud is a secure, FedRAMP-compliant deployment environment that enables government agencies to use Anypoint Platform in the cloud.
-+
-See xref:gov-cloud::index.adoc[About Government Cloud]
+== Hybrid Hosting Options
 
-=== Support Matrix for Cloud Hosting Options
+== Anypoint Platform Private Cloud Edition
 
-Not all Anypoint Platform components are supported in all cloud environments. The following table shows which component is supported by each environment:
-
-[%header,cols="4*a"]
-|===
-| Anypoint Platform Component | US Cloud | EU Cloud | MuleSoft Government Cloud
-| API Designer | Y | Y | Y
-| Anypoint Studio | Y | Y | Y
-| Flow Designer | Y | Y | N
-| Anypoint Exchange | Y | Y | Y
-| Anypoint API Community Manager* | Y | Y | N
-| Anypoint Partner Manager | Y | N | N
-| Access management | Y | Y | Y
-| Analytics | Y | Y | N
-| Anypoint API Manager | Y | Y | Y
-| Anypoint Runtime Manager | Y | Y | Y
-| Anypoint Monitoring | Y | Y | N
-| Secrets manager | Y | Y | N
-| Anypoint Visualizer | Y | Y | N
-| Anypoint Security edge policies | Y | Y | N
-| Anypoint Security tokenization | Y | Y | N
-|===
-
-[NOTE]
-Anypoint API Community Manager (API Community Manager) incorporates capabilities and functionality of the Salesforce platform into Anypoint Platform.
-
-== See Also
-
-* TBD
