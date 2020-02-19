@@ -6,7 +6,7 @@ MuleSoft provides and supports different hosting options to account for differen
 
 To understand the different hosting options, it is important to understand the control plane and runtime plane:
 
-image::intro-control-vs-runtime-planes.bmp[]
+image::intro-control-vs-runtime-planes.png[]
 
 * Control plane
 +
@@ -20,7 +20,7 @@ The runtime plane contains the runtime components of Anypoint Platform, includin
 
 The following diagram shows the possible hosting options where MuleSoft hosts and manages both the control plane and runtime plane:
 
-image::intro-cloud-hosting-options.bmp[]
+image::intro-cloud-hosting-options.png[]
 
 * US Cloud
 +
@@ -67,7 +67,7 @@ Anypoint API Community Manager (API Community Manager) incorporates capabilities
 
 MuleSoft provides and supports different environments that give you control over the physical location where your APIs and Mule applications are hosted. This ensures that data associated with each API and Mule application remains within the location you choose. The following diagram shows the different hosting options for the control plane and the runtime plane.
 
-image::intro-hybrid-hosting-options.bmp[]
+image::intro-hybrid-hosting-options.png[]
 
 In this scenario, MuleSoft hosts Anypoint Platform, which includes Exchange, Design Center, and Management Center (API Manager and Runtime Manager). The diagram also lists the different hosting options for Mule runtime server, which include:
 
@@ -110,7 +110,7 @@ Not all Anypoint Platform components are supported in each of these Mule runtime
 
 Anypoint Platform Private Cloud Edition is a version of Anypoint Platform that you host within your own data center. PCE enab les you to control the environment where your assets and metadata are stored.
 
-image:intro-private-cloud-edition.bmp[]
+image:intro-private-cloud-edition.png[]
 
 PCE supports deploying to Mule runtime servers hosted in CloudHub and hybrid environments. The latter enables you to host both the control plane and runtime plane within your own data centers.
 
