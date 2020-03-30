@@ -102,9 +102,7 @@ Runtime Fabric can only be managed by Cloud control planes (US Cloud, EU Cloud).
 
 * Standalone Runtimes
 +
-The standalone option enables you to host Mule runtime engine server and related services in an environment that you manage.
-+
-Using standalone runtimes, the Mule Runtime Server can run on a physical server, a virtual machine, or within a 3rd-party cloud installation like Amazon Web Services or Microsoft Azure.
+The standalone option enables you to host Mule runtime engine server and related services in an environment that you manage. Using standalone runtimes, the Mule Runtime Server can run on a physical server, a virtual machine, or within a 3rd-party cloud installation like Amazon Web Services or Microsoft Azure.
 +
 When using standalone runtimes, you are also responsible for providing the framework for high-availability, failover, clustering and load balancing.
 +
