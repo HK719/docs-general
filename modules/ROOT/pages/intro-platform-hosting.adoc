@@ -57,7 +57,7 @@ Some Anypoint Platform components are not supported in Private Cloud Edition. Se
 
 Not all Anypoint Platform components are supported in all cloud environments. The following table shows which component is supported by each environment:
 
-[%header,cols="4*a"]
+[%header,cols="5*a"]
 |===
 | Anypoint Platform Component | US Cloud | EU Cloud | MuleSoft Government Cloud | Private Cloud Edition
 | API Designer | Y | Y | Y | Y
