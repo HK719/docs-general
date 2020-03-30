@@ -48,10 +48,11 @@ See xref:gov-cloud::index.adoc[About Government Cloud] for more information.
 +
 MuleSoft also enables you to host the control plane within your own data center. Anypoint Platform Private Cloud Edition is a version of Anypoint Platform that supports hosting the control plane within a user-managed data center. This enables you to control the environment where your assets and metadata are stored.
 +
-Private Cloud Edition supports deploying to Mule runtime servers hosted in a standalone environment. You can host the control plane in a physical server, a virtual server, or a 3rd-party cloud environment such as Amazon Web Services.
+Private Cloud Edition supports deploying to Mule runtime servers hosted in a standalone environment. You can host the control plane in a physical server, a virtual server, or a 3rd-party cloud environment such as Amazon Web Services. 
 +
-[WARNING]
-Some Anypoint Platform components are not supported in Private Cloud Edition. See the Support Matrix for Control Plane Hosting Options for details.
+See xref:private-cloud::/latest/index.adoc[About Anypoint Platform PCE] for more information.
++
+Some Anypoint Platform components are not supported in Private Cloud Edition. See the <<Support Matrix for Control Plane Hosting Options>> for details.
 
 === Support Matrix for Control Plane Hosting Options
 
@@ -98,7 +99,7 @@ Runtime Fabric is a container service that enables you to run Mule applications 
 +
 Runtime Fabric comes bundled with technology such as Docker and Kubernetes to offer benefits such as high-availability, failover, clustering, and load balancing. See xref:runtime-fabric::/latest/index.adoc[Anypoint Runtime Fabric Overview] for more information.
 +
-Runtime Fabric can only be managed by Cloud control planes (US Cloud, EU Cloud). MuleSoft Government Coud and Private Cloud Edition do not support Runtime Fabric.
+Runtime Fabric can only be managed by Cloud control planes (US Cloud, EU Cloud). MuleSoft Government Cloud and Private Cloud Edition do not support Runtime Fabric.
 
 * Standalone Runtimes
 +
