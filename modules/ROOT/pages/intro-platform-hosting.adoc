@@ -24,7 +24,7 @@ Anypoint Platform is designed to enable the control plane and runtime plane to b
 * Host and manage the runtime plane with your own infrastructure while connecting it with the MuleSoft-managed control plane
 * Host both the control plane and runtime plane locally withint your own infrastructure.
 
-The sections below describe each hosting option.
+See Control Plane and Runtime Plane Support Matrix for information on which runtime plane hosting options are supported in each control plane option.
 
 == Control Plane Hosting Options
 
@@ -51,7 +51,7 @@ MuleSoft also enables you to host the control plane within your own data center.
 Private Cloud Edition supports deploying to Mule runtime servers hosted in a standalone environment. You can host the control plane in a physical server, a virtual server, or a 3rd-party cloud environment such as Amazon Web Services.
 +
 [WARNING]
-Some Anypoint Platform components are not supported in Private Cloud Edition. See the below Support Matrix for details.
+Some Anypoint Platform components are not supported in Private Cloud Edition. See the Support Matrix for Control Plane Hosting Options for details.
 
 === Support Matrix for Control Plane Hosting Options
 
@@ -116,45 +116,21 @@ Not all Anypoint Platform components are supported in each of the Runtime Plane 
 
 [%header,cols="4*a"]
 |===
-| Anypoint Platform Component | CloudHub | Runtime Fabric | Hybrid
+| Anypoint Platform Component | CloudHub | Runtime Fabric | Standalone
 | Mule runtime engine | Y | Y | Y
 | Anypoint MQ | Y | N | N
-| Anypoint Object Store | Y | N | Y
+| Anypoint Object Store | Y | N | N
 | Connectors | Y | Y | Y
 |===
 
+== Control Plane and Runtime Plane Support Matrix
 
-* US Cloud
-+
-In the US Cloud, Anypoint Platform and CloudHub are physically hosted within the United States. To improve performance and reduce latency, you can deploy APIs and Mule applications to Mule Runtimes located in different regions. When enabled, each regions appears as different deployment targets during deployment. This is the default environment.
+The following table lists which runtime plane options are supported in each control plane hosting option.
 
-* EU Cloud
-+
-In the EU Cloud, Anypoint Platform and CloudHub are physically hosted within the European Union.
-
-* MuleSoft Government Cloud
-+
-MuleSoft Government Cloud is a secure, FedRAMP-compliant deployment environment that enables government agencies to use Anypoint Platform in the cloud.
-+
-See xref:gov-cloud::index.adoc[About Government Cloud]
-
-=== Support Matrix for Cloud Hosting Options
-
-[%header,cols="4*a"]
+[%header,cols="5*a"]
 |===
-| Anypoint Platform Component | CloudHub | Runtime Fabric | Hybrid
-| Mule runtime engine | Y | Y | Y
-| Anypoint MQ | Y | N | N
-| Anypoint Object Store | Y | N | Y
-| Connectors | Y | Y | Y
-|===
-
-
-[%header,cols="4*a"]
-|===
-| Anypoint Platform Component | CloudHub | Runtime Fabric | Hybrid
-| Mule runtime engine | Y | Y | Y
-| Anypoint MQ | Y | N | N
-| Anypoint Object Store | Y | N | Y
-| Connectors | Y | Y | Y
+| Runtime Plane | US Cloud | EU Cloud| Government Cloud | Private Cloud Edition
+| CloudHub | Y | Y | Y | N
+| Standalone Runtimes | Y | Y | N | N
+| Runtime Fabric | Y | Y | N | N
 |===
