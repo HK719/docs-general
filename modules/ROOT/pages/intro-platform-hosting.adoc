@@ -122,6 +122,17 @@ Not all Anypoint Platform components are supported in each of the Runtime Plane 
 | Connectors | Y | Y | Y
 |===
 
+
+* Anypoint MQ and Anypoint Object Store
++
+Runtime Fabric and standalone runtimes do not support Anypoint MQ or Anypoint Object Store. Instead, Runtime Fabric and standalone runtimes support Mule clustering. On Runtime Fabric, multiple replicas of the same application can share objects. On standalone runtimes, multiple Mule runtime engines can share objects with each other.
++
+See xref:mule-runtime::choosing-the-right-clustering-topology[Cluster Runtime Instances]
+
+* Connector Support
++
+Connectors that retrieve and manipulate files on the file system are not supported, for example the file connector. Mule applications deployed to Runtime Fabric do not have access to the file system of the virtual machine nor the network mount. 
+
 == Control Plane and Runtime Plane Support Matrix
 
 The following table lists which runtime plane options are supported in each control plane hosting option.
